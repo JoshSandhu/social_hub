@@ -1,5 +1,5 @@
-from django.shortcuts import render
-from django.views import generic
+from django.shortcuts import render, get_object_or_404
+from django.views import generic, View
 from .models import Post
 
 # Create your views here.
@@ -19,6 +19,7 @@ class PostDetail(View):
         liked = False
         if post.likes.filter(id=self.request.user.id).exists():
             liked = True
+        disliked = False
         if post.dislikes.filter(id=self.request.user.id).exists():
             disliked = True
 
