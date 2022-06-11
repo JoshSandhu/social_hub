@@ -34,6 +34,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = ["socialhub-p4.herokuapp.com", "localhost"]
 
+CSRF_TRUSTED_ORIGINS = ["https://8000-joshsandhu-socialhub-2es6lwsia7k.ws-eu47.gitpod.io"]
+
 
 # Application definition
 
@@ -46,6 +48,9 @@ INSTALLED_APPS = [
     'cloudinary_storage', # New
     'django.contrib.staticfiles',
     'cloudinary', # New
+    
+    # User apps
+    'django_summernote',
 
     # Custom apps
     'blog',
