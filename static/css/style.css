@@ -42,7 +42,7 @@ body {
     background-color: #23BBBB;
 }
 
-.author {
+.author, .category {
     color: white;
     margin: 4px;
     text-transform: uppercase;

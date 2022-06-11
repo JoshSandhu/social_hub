@@ -45,6 +45,10 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
+    'django.contrib.sites', # New
+    'allauth', # New
+    'allauth.account', # New
+    'allauth.socialaccount', # New
     'cloudinary_storage', # New
     'django.contrib.staticfiles',
     'cloudinary', # New
@@ -55,6 +59,11 @@ INSTALLED_APPS = [
     # Custom apps
     'blog',
 ]
+
+SITE_ID = 1
+
+LOGIN_REDIRECT_URL = '/'
+LOGOUT_REDIRECT_URL = '/'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
