@@ -124,14 +124,16 @@ body {
     text-decoration: underline;
 }
 
-.btn-like {
+.btn-like, .btn-dislike {
     color: #E84610;
     border: none;
     background: transparent;
 }
 
 .btn-like:hover,
-.btn-like:active {
+.btn-dislike:hover,
+.btn-like:active,
+.btn-dislike:active {
     color: #E84610;
     background: transparent;
     border: none;

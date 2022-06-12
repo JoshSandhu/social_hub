@@ -34,39 +34,39 @@
                 </p>
                 <div class="row">
 
-                    <div class="col-1">
+                    <div class="col-2">
                         <strong>
                             {% if user.is_authenticated %}
                                 <form action="{% url 'post_like' post.slug %}" class="d-inline" method="POST">
                                     {% csrf_token %}
                                 {% if liked %}
-                                <button type="submit" name="blogpost_id" value="{{ post.slug }}" class="btn-like"><i
+                                {{ post.number_of_likes }}<button type="submit" name="blogpost_id" value="{{ post.slug }}" class="btn-like"><i
                                     class="fas fa-thumbs-up"></i></button>
                                 {% else %}
-                                <button type="submit" name="blogpost_id" value="{{ post.slug }}" class="btn-like"><i
+                                {{ post.number_of_likes }}<button type="submit" name="blogpost_id" value="{{ post.slug }}" class="btn-like"><i
                                     class="far fa-thumbs-up"></i></button>
                                 {% endif %}
                                 </form>
                             {% else %}
                         </strong>
                         <!-- The number of likes goes before the closing strong tag -->
-                        <strong class="text-secondary"><i class="far fa-thumbs-up"></i> {{ post.number_of_likes }} </strong>
+                        <strong class="text-secondary">{{ post.number_of_likes }}<i class="fas fa-thumbs-up"></i></strong>
                         {% endif %}
                         <strong>
                             {% if user.is_authenticated %}
                                 <form action="{% url 'post_dislike' post.slug %}" class="d-inline" method="POST">
                                     {% csrf_token %}
-                                {% if liked %}
+                                {% if disliked %}
                                 <button type="submit" name="blogpost_id" value="{{ post.slug }}" class="btn-dislike"><i
-                                    class="fas fa-thumbs-down"></i></button>
+                                    class="fas fa-thumbs-down"></i></button>{{ post.number_of_dislikes }}
                                 {% else %}
                                 <button type="submit" name="blogpost_id" value="{{ post.slug }}" class="btn-dislike"><i
-                                    class="far fa-thumbs-down"></i></button>
+                                    class="far fa-thumbs-down"></i></button>{{ post.number_of_dislikes }}
                                 {% endif %}
                                 </form>
                             {% else %}
                         </strong>
-                        <strong class="text-secondary"> {{ post.number_of_dislikes }} <i class="far fa-thumbs-down"></i></strong>
+                        <strong class="text-secondary"><i class="fas fa-thumbs-down"></i>{{ post.number_of_dislikes }}</strong>
                         {% endif %}
                     </div>
                     <div class="col-1">
