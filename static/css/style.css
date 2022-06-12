@@ -9,10 +9,6 @@ body {
     color: #4A4A4F;
 }
 
-.thin {
-    font-weight: 300;
-}
-
 .light-bg {
     background-color: #fff;
 }
@@ -27,6 +23,8 @@ body {
 
 .card {
     border: none;
+    height: auto;
+    max-height: 1000px;
     background-color: transparent;
 }
 
@@ -36,9 +34,11 @@ body {
 
 .image-flash {
     position: absolute;
-    bottom: 5%;
+    bottom: 20%;
     min-width: 30%;
-    left: -2px;
+    left: 35px;
+    border-radius: 30px;
+    text-align: center;
     background-color: #23BBBB;
 }
 
@@ -53,7 +53,6 @@ body {
     overflow: hidden;
     position: relative;
     display: inline-block;
-    height: 33vh;
     width: 100%;
 }
 
@@ -66,6 +65,7 @@ body {
 .masthead-image {
     position: relative;
     overflow: hidden;
+    max-width: 40vh;
 }
 
 .masthead-image:after {
