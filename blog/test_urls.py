@@ -4,7 +4,7 @@ from . import views
 
 # Create your tests here.
 
-# Urls tests
+""" Urls tests """
 
 class TestUrls(TestCase):
 

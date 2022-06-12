@@ -1,21 +1,24 @@
-from django.shortcuts import render, get_object_or_404, reverse
+from django.shortcuts import render, get_object_or_404, reverse, redirect
 from django.views import generic, View
+from django.http import HttpResponseRedirect
+from django.contrib.auth.models import User
+from django.contrib import messages
 from .models import Post
 from .forms import PostForm, CommentForm
-from django.http import HttpResponseRedirect
+
 
 # Create your views here.
 
 class PostList(generic.ListView):
     model = Post
-    queryset = Post.objects.filter(status=1).order_by('created_on')
+    queryset = Post.objects.filter(approved=1).order_by('created_on')
     template_name = 'index.html'
     paginate_by = 6
 
 class PostDetail(View):
 
     def get(self, request, slug, *args, **kwargs):
-        queryset = Post.objects.filter(status=1)
+        queryset = Post.objects.filter(approved=1)
         post = get_object_or_404(queryset, slug=slug)
         comments = post.comments.order_by("-created_on")
         liked = False
@@ -38,9 +41,9 @@ class PostDetail(View):
         )
     
     def post(self, request, slug, *args, **kwargs):
-        queryset = Post.objects.filter(status=1)
+        queryset = Post.objects.filter(approved=1)
         post = get_object_or_404(queryset, slug=slug)
-        comments = post.comments.filter(approved=True).order_by("-created_on")
+        comments = post.comments.order_by("-created_on")
         liked = False
         if post.likes.filter(id=self.request.user.id).exists():
             liked = True
@@ -69,7 +72,7 @@ class PostDetail(View):
                 "comments": comments,
                 "liked": liked,
                 "disliked": disliked,
-                "comment_form": CommentForm()
+                "comment_form": CommentForm,
             },
         )
 
@@ -100,31 +103,21 @@ class PostDislike(View):
 class CreatePost(View):
 
     def get(self, request, *args, **kwargs):
+        
+        post_form = PostForm()
+        context = {'post_form': post_form}
+        return render(request, 'create_post.html', context)
 
-        return render (
-            request,
-            "create_post.html",
-            {
-                "posted": False,
-                "post_form": PostForm()
-            },
-        )
     def post(self, request, *args, **kwargs):
 
-        post_form = PostForm(data=request.POST)
+        post_form = PostForm(request.POST, request.FILES)
 
         if post_form.is_valid():
-            post_form.instance.name = request.user.username
-            post.save()
-
-        else:
-            post_form = PostForm()
-
-        return render (
-            request,
-            "create_post.html",
-            {
-                "posted": True,
-                "post_form": PostForm()
-            },
-        )
+            form = post_form.save(commit=False)
+            form.author = User.objects.get(username=request.user.username)
+            form.slug = form.title.replace(" ", "-")
+            messages.success(
+                request, 'Your post has been submitted and awaiting approval. You will now be redirected to the home page.'
+            )
+            form.save()
+        return redirect('home')
