@@ -21,12 +21,23 @@ body {
     background-color: #F9FAFC;
 }
 
+h1, h2, h3 {
+    text-align: center;
+}
 .card {
     border: none;
     height: auto;
-    max-height: 1000px;
     background-color: transparent;
 }
+
+img {
+    display: block;
+    max-width:100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    border-radius: 60px;
+  }
 
 .image-container {
     position: relative;
@@ -59,6 +70,8 @@ body {
 .masthead-text {
     background-color: #445261;
     color: white;
+    text-align: center;
+    border-radius: 60px;
     position: relative;
 }
 
@@ -68,18 +81,9 @@ body {
     max-width: 40vh;
 }
 
-.masthead-image:after {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 90%;
-    height: 100%;
-    width: 150%;
-    background: #445261;
-    -webkit-transform: skew(15deg);
-    -moz-transform: skew(15deg);
-    transform: skew(15deg);
-    z-index: 100;
+.comments {
+    border-radius: 10px;
+    border: black 1px solid;
 }
 
 .post-link {
