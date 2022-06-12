@@ -1,7 +1,8 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, reverse
 from django.views import generic, View
 from .models import Post
 from .forms import PostForm, CommentForm
+from django.http import HttpResponseRedirect
 
 # Create your views here.
 
@@ -73,6 +74,30 @@ class PostDetail(View):
                 "comment_form": CommentForm()
             },
         )
+
+class PostLike(View):
+
+    def post(self,request,slug):
+        post = get_object_or_404(Post, slug=slug)
+
+        if post.likes.filter(id=request.user.id).exists():
+            post.likes.remove(request.user)
+        else:
+            post.likes.add(request.user)
+
+        return HttpResponseRedirect(reverse('post_detail', args=[slug]))
+
+class PostDislike(View):
+
+    def post(self,request,slug):
+        post = get_object_or_404(Post, slug=slug)
+
+        if post.dislikes.filter(id=request.user.id).exists():
+            post.dislikes.remove(request.user)
+        else:
+            post.dislikes.add(request.user)
+
+        return HttpResponseRedirect(reverse('post_detail', args=[slug]))
 
 class CreatePost(View):
 
