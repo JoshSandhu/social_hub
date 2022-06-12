@@ -4,6 +4,12 @@
 
 <div class="col-md-4 card mb-4  mt-3 ">
     <div class="card-body">
+        {% if posted %}
+        <div class="alert alert-success" role="alert">
+            Your post is currently awaiting approval. Please be patient.
+        </div>
+
+        {% else %}
         {% if user.is_authenticated %}
 
         <h3>Start your conversation by creating a post.</h3>
@@ -14,6 +20,7 @@
             <button type="submit" class="btn btn-signup btn-lg">Submit</button>
         </form>
 
+        {% endif %}
         {% endif %}
     </div>
 </div>
