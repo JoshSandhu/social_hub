@@ -24,9 +24,5 @@ class PostAdmin(SummernoteModelAdmin):
 class CommentAdmin(admin.ModelAdmin):
 
     list_display = ('name', 'body', 'post', 'created_on')
-    list_filter = ('post','created_on', 'approved')
+    list_filter = ('post','created_on')
     search_fields = ['name', 'email', 'body']
-    actions = ['review_comments']
-
-    def review_comments(self, request, queryset):
-        queryset.update(approved=True)
