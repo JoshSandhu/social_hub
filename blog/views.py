@@ -1,6 +1,7 @@
 from django.shortcuts import render, get_object_or_404
 from django.views import generic, View
 from .models import Post
+from .forms import PostForm, CommentForm
 
 # Create your views here.
 
@@ -30,6 +31,19 @@ class PostDetail(View):
                 "post": post,
                 "comments": comments,
                 "liked": liked,
-                "disliked": disliked
+                "disliked": disliked,
+                "comment_form": CommentForm()
+            },
+        )
+
+class CreatePost(View):
+
+    def get(self, request, *args, **kwargs):
+
+        return render (
+            request,
+            "create_post.html",
+            {
+                "post_form": PostForm()
             },
         )
