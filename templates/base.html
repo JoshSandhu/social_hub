@@ -50,9 +50,15 @@
                     </li>
                     {% endif %}
                 </ul>
-                <span class="navbar-text text-muted">
-                    Enjoying conversation again.
-                </span>
+                {% if user.is_authenticated %}
+                    <span class="navbar-text text-muted">
+                        Signed in as: {{ user.username }}
+                    </span>
+                {% else %}
+                    <span class="navbar-text text-muted">
+                        Enjoying conversation again.
+                    </span>
+                {% endif %}
             </div>
         </div>
     </nav>
