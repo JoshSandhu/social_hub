@@ -28,6 +28,7 @@ h1, h2, h3 {
 
 .post-card {
     border: thick double #23BBBB;
+    text-align: center;
 }
 
 .card {
@@ -117,13 +118,10 @@ img {
     color: lightgray;
 }
 
-.responses {
-    justify-content: space-around;
-}
-
 .btn-signup {
     background-color: #23BBBB;
     color: #fff;
+    margin: 10px;
 }
 
 .btn-signup:hover,
@@ -161,4 +159,8 @@ img {
 .page-link {
     margin: 10px;
     border-radius: 20px;
+}
+
+.footer-link {
+    color: #fff;
 }
