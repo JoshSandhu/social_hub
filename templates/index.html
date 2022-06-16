@@ -9,8 +9,8 @@
         <div class="col-12 mt-3 left">
             <div class="row">
                 {% for post in post_list %}
-                <div class="col-md-2 post-card">
-                    <div class="card h-50 mb-4">
+                <div class="col-md-4 post-card">
+                    <div class="card mb-4">
                         <div class="card-body h-100">
                             <div class="image-container h-100">
                                 {% if "placeholder" in post.featured_image.url %}
@@ -35,10 +35,12 @@
                         </div>
                     </div>
                 </div>
-                {% if forloop.counter|divisibleby:6 %}
+                {% if forloop.counter|divisibleby:3 %}
             </div>
-            {% endif %}
-            {% endfor %}
+            <div class="row">
+                {% endif %}
+                {% endfor %}
+            </div>
         </div>
     </div>
     {% if is_paginated %}

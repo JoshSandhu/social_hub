@@ -29,10 +29,15 @@ h1, h2, h3 {
 .post-card {
     border: thick double #23BBBB;
 }
+
 .card {
     border: none;
     height: auto;
     background-color: transparent;
+}
+
+.card-text {
+    text-align: center;
 }
 
 img {
@@ -57,10 +62,6 @@ img {
     border: thick double #fff;
     border-radius: 20px;
     background-color: #23BBBB;
-}
-
-.card-body > p {
-    text-align: center;
 }
 
 .author, .category {
@@ -155,4 +156,9 @@ img {
     color: #00008B;
     background: transparent;
     border: none;
+}
+
+.page-link {
+    margin: 10px;
+    border-radius: 20px;
 }
