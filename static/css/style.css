@@ -1,20 +1,21 @@
 body {
     background-color: #F9FAFC;
+    font-family: 'Roboto', sans-serif;
 }
 
 .brand {
-    font-family: Lato, sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-size: 1.4rem;
     font-weight: 700;
-    color: #4A4A4F;
+    color: #23BBBB;
 }
 
 .light-bg {
     background-color: #fff;
 }
 
-.dark-bg {
-    background-color: #445261;
+.color-bg {
+    background-color: #23BBBB;
 }
 
 .main-bg {
@@ -23,6 +24,10 @@ body {
 
 h1, h2, h3 {
     text-align: center;
+}
+
+.post-card {
+    border: thick double #23BBBB;
 }
 .card {
     border: none;
@@ -36,7 +41,7 @@ img {
     max-height: 100%;
     width: auto;
     height: auto;
-    border-radius: 60px;
+    
   }
 
 .image-container {
@@ -47,10 +52,15 @@ img {
     position: absolute;
     bottom: 20%;
     min-width: 30%;
-    left: 35px;
-    border-radius: 30px;
+    left: 0px;
     text-align: center;
+    border: thick double #fff;
+    border-radius: 20px;
     background-color: #23BBBB;
+}
+
+.card-body > p {
+    text-align: center;
 }
 
 .author, .category {
@@ -68,10 +78,9 @@ img {
 }
 
 .masthead-text {
-    background-color: #445261;
+    background-color: #23BBBB;
     color: white;
     text-align: center;
-    border-radius: 60px;
     position: relative;
 }
 
@@ -79,11 +88,12 @@ img {
     position: relative;
     overflow: hidden;
     max-width: 40vh;
+    border: thick double #23BBBB;
 }
 
 .comments {
     border-radius: 10px;
-    border: black 1px solid;
+    border: #23BBBB 1px solid;
 }
 
 .post-link {
@@ -93,7 +103,7 @@ img {
 
 .post-link:hover,
 .page-link {
-    color: #E84610;
+    color: #00008B;
 }
 
 .post-title {
@@ -104,6 +114,10 @@ img {
 .post-subtitle {
     margin-left: 5%;
     color: lightgray;
+}
+
+.responses {
+    justify-content: space-around;
 }
 
 .btn-signup {
@@ -129,7 +143,7 @@ img {
 }
 
 .btn-like, .btn-dislike {
-    color: #E84610;
+    color: #00008B;
     border: none;
     background: transparent;
 }
@@ -138,7 +152,7 @@ img {
 .btn-dislike:hover,
 .btn-like:active,
 .btn-dislike:active {
-    color: #E84610;
+    color: #00008B;
     background: transparent;
     border: none;
 }
