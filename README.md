@@ -1,6 +1,6 @@
 # Social Hub
 
-## Table of Contents
+# Table of Contents
 * Social Hub Introduction
 * UX
     + Strategy
@@ -15,11 +15,11 @@
 * Deployment
 * Credits
 
-## Introduction to Social Hub
+# Introduction to Social Hub
 Welcome to Social Hub. The Full Stack Web Application for communites to grow. The ability to create posts and discussions to hear and converse any topic. To visit the final launched project click here!!!!!!!!
 
-## UX
-### Strategy
+# UX
+## Strategy
 User expectations:
 * The user should have the ability to create a post, see other users comments and likes as well as comment on own and/or other posts.
 
@@ -40,10 +40,59 @@ User Stories:
 * As a Site user I can Create a post so that share my view with the world.
 * As a Site User I can like or unlike a post so that I can interact with the content.
 
-### Scope
+## Scope
+### Content Requirements:
+* Admin panel where the owner of the site can approve and manage comments.
+* A page where user can register.
+* A page where user can log in.
+* A page where user can log out.
+* A page which displays a list of posts written by users.
+* A page where user can rad the content of a particular post.
+* A page where user can create own post.
 
-### Structure
+### Functional Requirements:
+* Option for the owner to approve and manage posts.
+* Option for the users to register at the website.
+* Option for the users to log in to the website.
+* Option for the users to log out from the website.
+* Option for the users to see posts and choose to read it's content.
+* Option for the users to read content of selected post.
+* Option for the users to write a post.
+* Option for the users to like or dislike posts.
 
-### Skeleton
+## Structure
+### Interaction Function Design
+* Navbar to include all options in a presentable way for the user.
+* Information alerting the user of any changes upon an action.
+* Buttons placed throughout the website are easy to see and are clear in their function.
 
-### Surface
+### Information Structure
+* Simple design with clear and visible information presented to the user for easy use.
+* Home page contains information which is clear in asking for registration to gain full access to the site.
+* User is alerted with feedback on any changes made.
+* Navigation shows clearly the current login status of the user.
+
+## Skeleton
+### Navigation
+* When the Logo (Social Hub) is clicked the user is directed to the home page.
+* When the Home button is clicked the user is directed to the home page.
+* When the Register button is clicked the user is directed to the Sign up page.
+* When the Log in button is clicked the user is directed to the Log in page.
+* When the Log out button is clicked the user is directed to the Log out page.
+* When the title for a post is clicked the user is taken to the post details page.
+* When the User is logged in the navigation displays the logged in user name.
+
+### Interface Design
+All elements on the website needs to ensure ease of access, easy to understand and use in order to maximize usability and experience.
+
+### Wireframes
+Wireframes can be found here.!!
+
+### ER Diagram 
+ER Diagram can be found here.!!
+
+### Relational Schema
+Relational Schema can be found here.!!
+
+## Surface
+* All interface content arrangement, typography, navigation and colors have been designed for ease of use and a relaxed emotional use in mind.
