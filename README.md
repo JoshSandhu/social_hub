@@ -15,7 +15,7 @@
 * [Credits](#credits)
 
 # Introduction to Social Hub
-Welcome to Social Hub. The Full Stack Web Application for communites to grow. The ability to create posts and discussions to hear and converse any topic. To visit the final launched project click here!!!!!!!!
+Welcome to Social Hub. The Full Stack Web Application for communites to grow. The ability to create posts and discussions to hear and converse any topic. To visit the final launched project click [here.](https://socialhub-p4.herokuapp.com)
 
 # UX
 ## Strategy
@@ -174,15 +174,16 @@ All buttons function as intended.
 - https://pagespeed.web.dev/?utm_source=psi&utm_medium=redirect - tested for the websites loading speed performance
 
 ## Bugs
+During first deployment there was some issues with Heroku. The build was crashing. After discussion with a tutor on the code institute team I learned the reason was due to an outdated requirements.txt file which was not not installing Gunicorn.
 
-At time of deployment there was no known bugs found. 
+At time of deployment there was no further known bugs found. 
 
 # Deployment
 
 ## Initial Commit
 
 Once I created the project, the app and installed Django and supporting libraries in Gitpod, I created the requirements.txt file with the following command, in terminal:
-- pip install -r requirements.txt
+* pip install -r requirements.txt
 
 Once logged into Heroku I:
 * Created new Heroku App
