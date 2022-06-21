@@ -85,7 +85,7 @@ User Stories:
 All elements on the website needs to ensure ease of access, easy to understand and use in order to maximize usability and experience.
 
 ### Wireframes
-Wireframes can be found here.!!
+Wireframes can be found here <a href="">
 
 ### ER Diagram 
 ER Diagram can be found here.!!
@@ -133,15 +133,16 @@ Relational Schema can be found here.!!
 # Testing
 ## Manual Testing:
 Website functionality tested according to user stories:
-### As the owner of the site.
+### As the owner of the site:
 | Goal | Achieved |
 | --- | --- |
 | To be able to approve the posts before they are presented on the site |  Yes |
+|  |  |
 
 The owner of the website can access the admin panel by adding /admin onto the end of homepage url.
 There, the owner has to put in admin credentials provided by the developer.
 
-### As a user of the site.
+### As a user of the site:
 | Goal | Achieved |
 | --- | --- |
 | Able to register for an account for full access | Yes |
@@ -150,8 +151,9 @@ There, the owner has to put in admin credentials provided by the developer.
 | Able to like/dislike a post | Yes |
 | Able to leave a comment if user is logged in | Yes |
 | Able to write a post and submit for publication | Yes |
+|  |  |
 
-### Feedback and alert message tests.
+### Feedback and alert message tests:
 | Goal | Achieved |
 | --- | --- |
 | User informed of logged in status | Yes |
@@ -160,6 +162,7 @@ There, the owner has to put in admin credentials provided by the developer.
 | User able to logout to a account | Yes |
 | User submitted a post for publication | Yes |
 | When creating a post the user is alerted when required fields are empty | Yes |
+|  |  |
 
 ### Usability
 
