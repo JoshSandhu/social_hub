@@ -48,17 +48,17 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
-    'django.contrib.sites', # New
-    'allauth', # New
-    'allauth.account', # New
-    'allauth.socialaccount', # New
-    'cloudinary_storage', # New
+    'django.contrib.sites',  # New
+    'allauth',  # New
+    'allauth.account',  # New
+    'allauth.socialaccount',  # New
+    'cloudinary_storage',  # New
     'django.contrib.staticfiles',
-    'cloudinary', # New
-    
+    'cloudinary',  # New
+
     # User apps
-    'django_summernote', # New
-    'crispy_forms', # New
+    'django_summernote',  # New
+    'crispy_forms',  # New
 
     # Custom apps
     'blog',
@@ -113,20 +113,18 @@ WSGI_APPLICATION = 'social_hub.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
-#DATABASES = {
+# DATABASES = {
 #    'default': {
 #        'ENGINE': 'django.db.backends.sqlite3',
 #        'NAME': BASE_DIR / 'db.sqlite3',
 #    }
-#}
+# }
 
 # New DATABASES SECTION
 
 DATABASES = {
    'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
 }
-
-
 
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators
