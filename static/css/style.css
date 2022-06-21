@@ -118,6 +118,10 @@ img {
     color: lightgray;
 }
 
+.user-post-list {
+    text-align: center;
+}
+
 .btn-signup {
     background-color: #23BBBB;
     color: #fff;

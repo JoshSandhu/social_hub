@@ -4,6 +4,7 @@ from .forms import PostForm, CommentForm
 
 """ Test for blog form """
 
+
 class TestPostForm(TestCase):
 
     """ Tests if post title is required """
@@ -30,7 +31,9 @@ class TestPostForm(TestCase):
             form.Meta.fields, ('title', 'category', 'content', 'featured_image')
         )
 
+
 """ Test for comments form """
+
 
 class TestCommentForm(TestCase):
 

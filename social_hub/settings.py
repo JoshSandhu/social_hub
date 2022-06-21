@@ -37,7 +37,7 @@ X_FRAME_OPTIONS = 'SAMEORIGIN'
 
 ALLOWED_HOSTS = ["socialhub-p4.herokuapp.com", "localhost"]
 
-CSRF_TRUSTED_ORIGINS = ["socialhub-p4.herokuapp.com"]
+CSRF_TRUSTED_ORIGINS = ["https://8000-joshsandhu-socialhub-2es6lwsia7k.ws-eu47.gitpod.io"]
 
 
 # Application definition
