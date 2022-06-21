@@ -85,13 +85,7 @@ User Stories:
 All elements on the website needs to ensure ease of access, easy to understand and use in order to maximize usability and experience.
 
 ### Wireframes
-Wireframes can be found here <a href="">
-
-### ER Diagram 
-ER Diagram can be found here.!!
-
-### Relational Schema
-Relational Schema can be found here.!!
+Wireframes can be found <a href="https://github.com/JoshSandhu/social_hub/tree/main/assets/wireframes" target="_blank">here.</a>
 
 ## Surface
 * All interface content arrangement, typography, navigation and colors have been designed for ease of use and a relaxed emotional use in mind.
